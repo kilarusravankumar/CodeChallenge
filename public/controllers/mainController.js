@@ -58,7 +58,7 @@ myApp.controller('mainController',['$scope','$http',($scope,$http)=>{
                      $scope.userShares.splice(i,1);
                 }
             }else{
-                alert("you dnt have that Many shares");
+                alert("you don't have that Many shares");
             }
         }else{
             alert("You did not buy that Share"); 
