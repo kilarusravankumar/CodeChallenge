@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kilarusravankumar/CodeChallenge.git"
+    "url": "git+https://github.com/kilarusravankumar/stockexchange.git"
   },
   "author": "sravan kumar kilaru",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kilarusravankumar/CodeChallenge/issues"
+    "url": "https://github.com/kilarusravankumar/stockexchange/issues"
   },
-  "homepage": "https://github.com/kilarusravankumar/CodeChallenge#readme"
+  "homepage": "https://github.com/kilarusravankumar/stockexchange#readme"
 }
