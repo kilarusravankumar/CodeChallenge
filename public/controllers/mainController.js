@@ -10,7 +10,7 @@ myApp.controller('mainController',['$scope','$http',($scope,$http)=>{
 
    $scope.onClick= function (){
        
-       $scope.url="http://data.benzinga.com/rest/richquoteDelayed?symbols="+$scope.lookup.toUpperCase()+"&callback=JSON_CALLBACK";
+       $scope.url="https://data.benzinga.com/rest/richquoteDelayed?symbols="+$scope.lookup.toUpperCase()+"&callback=JSON_CALLBACK";
        if($scope.lookup){
             var symbol=$scope.lookup.valueOf();
             $http.jsonp($scope.url).then((response)=>{
