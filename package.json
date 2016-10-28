@@ -2,6 +2,7 @@
   "name": "benzinga_exchange",
   "version": "1.0.0",
   "description": "Benzinga code challenge",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +17,14 @@
     "url": "https://github.com/kilarusravankumar/stockexchange/issues"
   },
   "homepage": "https://github.com/kilarusravankumar/stockexchange#readme",
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "dependencies": {
     "express": "^4.14.0"
+  },
+   "engines": {
+    "node": "4.4.0"
   }
 }
