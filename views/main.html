@@ -1,0 +1,76 @@
+
+            <!-- header of the landing page-->
+            <div >
+           <header class="w3-container w3-teal">
+                <h1>Simple stock Exchange</h1>
+                <div class="w3-closebtn">
+                     <i class="material-icons">search</i>
+                    <input  type="text" ng-model="lookup" placeholder="symbol">
+                    <button class="w3-btn w3-light-grey" ng-click="onClick()">Lookup</button>
+                </div>
+            </header>
+            <!-- Header ends here -->
+            <!---Displaying total cash available -->
+            <div class="w3-container "><h2 class="cash">CASH:{{cash|currency}}</h2></div>
+            <!-- two divs div one of lookup bid and ask, div two is for current portifolio -->
+            <section>
+                <!-- Div One -->
+                    <div id="one" class="w3-card-4 block" >
+                        <header class="w3-container">
+                             <h1>{{shares.name}} {{shares.symbol}}{{shares.error.message}}</h1>
+                    </header>
+                        <div class="w3-container">
+                        <table class="w3-table-all">
+                            <thead >
+                                <tr class="w3-teal">
+                                    <th>Bid</th>
+                                    <th>Ask</th>
+                                </tr>
+                                
+                            </thead>
+                            <tr>
+                                 <td><h4>{{shares.bidPrice}}</h4></td>
+                                <td><h4>{{shares.askPrice}}</h4></td>
+                            </tr>
+                          
+                        </table>
+                         </div>
+                        <footer class="w3-container">
+                            <input type="number"placeholder="Quantity" ng-model="q" >
+                            
+                           
+                           
+                            <button class="w3-btn w3-teal buySell" ng-if="q>=1" ng-click="onAsk()" >Buy</button>
+                            <button class="w3-btn w3-teal buySell" ng-if="q>=1" ng-click="onBid()" >Sell</button>
+                        </footer>
+                       
+                    </div>
+                    <!-- Dive two ---->
+                    <div id="two" class="w3-card-4 block">
+                        <header class="w3-container" style="height:12%;">
+                             <h1>Curent Portfolio</h1>
+                            </header>
+                        <div class="w3-container">
+                        <table class="w3-table-all w3-hoverable">
+                            <thead >
+                                <tr class="w3-teal">
+                                    <th>Comapny</th>
+                                    <th>Quantity</th>
+                                    <th>Price Paid</th>
+                                </tr>
+                                
+                            </thead>
+                            <tr ng-repeat="s in userShares" ng-click="stockView()">
+                                 <td>{{s.name}}</td>
+                                <td>{{s.quantity}}</td>
+                                <td>{{s.pricePaid|currency}}</td>
+                            </tr>
+                          
+                        </table>
+                         </div>
+                                            
+
+                    </div>
+            </section>  
+            </div> 
+       
