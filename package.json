@@ -11,6 +11,7 @@
   },
   "author": "sravan kumar kilaru",
   "license": "ISC",
+  "start":"server.js",
   "bugs": {
     "url": "https://github.com/kilarusravankumar/stockexchange/issues"
   },

@@ -45,7 +45,7 @@ myApp.controller('mainController',['$scope','$http',($scope,$http)=>{
     }
 
     $scope.onBid=function(){
-        console.log(hasStock($scope.userShares,$scope.shares));
+        
         if(hasStock($scope.userShares,$scope.shares)!=-1){
             
             var i=hasStock($scope.userShares,$scope.shares);
@@ -54,6 +54,7 @@ myApp.controller('mainController',['$scope','$http',($scope,$http)=>{
            
             $scope.userShares[i].quantity-=$scope.q;
                 $scope.userShares[i].pricePaid-=$scope.q*$scope.shares.bidPrice;
+                $scope.cash+=$scope.q*$scope.shares.bidPrice;
                 if($scope.userShares[i].quantity<=0){
                      $scope.userShares.splice(i,1);
                 }
