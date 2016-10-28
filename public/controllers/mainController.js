@@ -21,6 +21,8 @@ myApp.controller('mainController',['$scope','$http',($scope,$http)=>{
                 $scope.lookup="Symbol not found";
                 });
          }
+         
+         $scope.lookup="";
     }
 
     $scope.onAsk=function(){
