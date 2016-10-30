@@ -41,8 +41,8 @@
                             
                            
                            
-                            <button class="w3-btn w3-ripple w3-teal buySell" ng-if="q>=1 && shares.name" ng-click="onAsk()" >Buy</button>
-                            <button class="w3-btn w3-ripple w3-teal buySell" ng-if="q>=1 && shares.name" ng-click="onBid()" >Sell</button>
+                            <button class="w3-btn w3-ripple w3-teal buySell" ng-if="q>=1 && shares.name && q*shares.askPrice<cash" ng-click="onAsk()" >Buy</button>
+                            <button class="w3-btn w3-ripple w3-teal buySell" ng-if="q>=1 && shares.name && q*shares.askPrice<cash" ng-click="onBid()" >Sell</button>
                         </footer>
                        
                     </div>

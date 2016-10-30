@@ -22,3 +22,6 @@ div#two {
 .cash{
     margin-left:40%;
 }
+.toast {
+    opacity: 1 !important;
+}

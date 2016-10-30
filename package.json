@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"server.js"
+    "start": "server.js"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   },
   "author": "sravan kumar kilaru",
   "license": "ISC",
-  "start":"server.js",
+  "start": "server.js",
   "bugs": {
     "url": "https://github.com/kilarusravankumar/stockexchange/issues"
   },
@@ -23,9 +23,10 @@
     "heroku"
   ],
   "dependencies": {
+    "angular-toastr": "^2.1.1",
     "express": "^4.14.0"
   },
-   "engines": {
+  "engines": {
     "node": "4.4.0"
   }
 }
