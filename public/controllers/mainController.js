@@ -27,9 +27,22 @@ myApp.controller('mainController',['$scope','$http','toastr',($scope,$http,toast
          
          $scope.lookup="";
     }
+    // $scope.$watch($scope.q,function(newQuantity){
+    //     if(newQuantity*$scope.shares.askPrice>$scope.cash){
+    //         toast.error("You cant buy too many shares , decrease quantity");
+    //         console.log("changes");
+    //     }
+    // })
+    $scope.checkQuantity=function(newQuantity){
+        if(newQuantity*$scope.shares.askPrice>$scope.cash){
+            toastr.error("You cant buy too many shares , decrease quantity");
+            console.log("changes");
+        }
+    }
 
     $scope.onAsk=function(){
-        if($scope.q*$scope.shares.askPrice<$scope.cash){
+        console.log($scope.q*$scope.shares.askPrice);
+        if($scope.q*$scope.shares.askPrice<$scope.cash ){
         var i=0;
         if(hasStock($scope.userShares,$scope.shares)==-1){
              $scope.shares.quantity=$scope.q;
@@ -41,13 +54,14 @@ myApp.controller('mainController',['$scope','$http','toastr',($scope,$http,toast
            $scope.userShares[i].quantity+=$scope.q;
             $scope.userShares[i].pricePaid+=$scope.q*$scope.shares.askPrice;
            }
-       $scope.cash-=$scope.shares.quantity*$scope.shares.askPrice;
+       $scope.cash-=$scope.q*$scope.shares.askPrice;
        if($scope.cash<=0){
             console.log($scope.cash);
             
-             $scope.cash+=$scope.shares.quantity*$scope.shares.askPrice;
+             $scope.cash+=$scope.q*$scope.shares.askPrice;
+             console.log($scope.cash);
              $scope.userShares[i].quantity-=$scope.q;
-              $scope.userShares[i].pricePaid-=$scope.q*$scope.shares.askPrice;
+             
            
              toastr.error("you cannot buy that much, check your cash ");
        }
@@ -59,7 +73,7 @@ myApp.controller('mainController',['$scope','$http','toastr',($scope,$http,toast
         toastr.error("you cannot buy that much, check your cash ");
     }
 }
-     
+   
 
     $scope.onBid=function(){
         
