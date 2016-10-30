@@ -34,7 +34,9 @@ myApp.controller('mainController',['$scope','$http','toastr',($scope,$http,toast
     //     }
     // })
     $scope.checkQuantity=function(newQuantity){
+        
         if(newQuantity*$scope.shares.askPrice>$scope.cash){
+            toastr.clear();
             toastr.error("You cant buy too many shares , decrease quantity");
             console.log("changes");
         }
@@ -70,6 +72,7 @@ myApp.controller('mainController',['$scope','$http','toastr',($scope,$http,toast
        }
        
     }else{
+        
         toastr.error("you cannot buy that much, check your cash ");
     }
 }
