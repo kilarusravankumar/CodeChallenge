@@ -1,51 +1,66 @@
-
-.buySell{
-    margin-left:4%;
-    width:14%;
+.buySell {
+    margin-left: 4%;
+    width: 14%;
 }
+
 section {
     width: auto;
     height: 80%;
     margin: auto;
     padding: 10px;
 }
+
 div#one {
     width: 40%;
     height: 40%;
     float: left;
 }
+
 div#two {
-    margin-left:43%;
+    margin-left: 43%;
     height: auto;
-    
 }
-.cash{
-    margin-left:40%;
+
+.cash {
+    margin-left: 40%;
 }
+
 .toast {
     opacity: 1 !important;
 }
+
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
-body { margin: 30px; }
+body {
+    margin: 30px;
+}
+
 .search {
-  position: relative;
-  color: #aaa;
-  font-size: 16px;
+    position: relative;
+    color: #aaa;
+    font-size: 16px;
 }
 
 .search input {
-  width: 250px;
-  height: 32px;
-
-  background: #fcfcfc;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+    width: 250px;
+    height: 32px;
+    background: #fcfcfc;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
 }
 
-.search input { text-indent: 32px;}
-.search .fa-search { 
-  position: absolute;
-  top: 10px;
-  left: 10px;
+.search input {
+    text-indent: 32px;
+}
+
+.search .fa-search {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
 }
